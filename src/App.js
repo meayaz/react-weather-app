@@ -31,7 +31,9 @@ function App() {
       <div className="container">
         <div className="top">
           <div className="location">
-            <p>{data.name}</p>
+            <p>
+              {data.name} / {data.sys.country}
+            </p>
           </div>
           <div className="temp">
             {data.main ? <h1>{data.main.temp.toFixed()}°C</h1> : null}
@@ -55,7 +57,7 @@ function App() {
             </div>
             <div className="wind">
               {data.wind ? (
-                <p className="bold">{data.wind.speed.toFixed()} Km/s</p>
+                <p className="bold">{data.wind.speed} km/s</p>
               ) : null}
               <p>Rüzgar Hızı</p>
             </div>
